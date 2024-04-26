@@ -1,5 +1,6 @@
 import React from "react";
 import fireInsuranceGif from "./assets/fire-insurance.gif";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -29,24 +30,26 @@ function Header() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a className="nav-link active" aria-current="page" href="/">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/products">
                 Products
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/aboutus">
                 About Us
               </a>
             </li>
           </ul>
           <div className="d-flex">
             <button className="btn btn-outline-success me-3">Sign Up</button>
-            <button className="btn btn-outline-primary">Log In</button>
+            <Link to={'/login'}>
+             <button className="btn btn-outline-primary">Log In</button>
+             </Link>
           </div>
         </div>
       </div>
