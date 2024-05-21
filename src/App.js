@@ -8,10 +8,13 @@ import HomePage from "./components/Customer/HomePage";
 import AboutUs from "./components/Pages/AboutUs";
 import { ViewProducts } from "./components/Customer/ViewProducts";
 import { AddProduct } from "./components/Seller/AddProduct";
- 
+import Sidebar from "./components/Sidebar";
+
  function App() {
-  return <div> 
-     <Header/>
+  return <div className="d-flex">
+      <div className="col-auto">
+    <Sidebar />
+      </div>
      <Routes>
      <Route path='/' element={<Home/>}/>
      <Route path='/login' element={<Login />}/> 
@@ -21,7 +24,8 @@ import { AddProduct } from "./components/Seller/AddProduct";
      <Route path='/addproduct' element={<AddProduct /> }/> 
      <Route path="/viewproducts" element={<ViewProducts />}/>
      </Routes>
-     <Footer />
+     {/* <Header/>
+     <Footer />  */}
    </div> 
  }
 
